@@ -12,6 +12,8 @@
     "version": "git add package.json",
     "postversion": "git push && git push --tags",
     "prepublish": "npm t",
+    "serve": "node src/server",
+    "start": "nodemon src/server",
     "format": "prettier --write \"**/*.{js,json,md}\""
   },
   "keywords": [],
@@ -24,6 +26,7 @@
   "devDependencies": {
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.0"
   },
   "husky": {
@@ -41,5 +44,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
