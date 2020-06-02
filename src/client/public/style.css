@@ -1,3 +1,34 @@
 body {
-  color: orange;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.Page {
+  padding: 1rem 2rem;
+}
+
+.MainHeading {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.MainHeading > span {
+  font-size: 3.5rem;
+}
+
+.Sentence {
+}
+
+.Sentence:before {
+  content: '“';
+  padding: 0 0.3rem 0 0;
+}
+
+.Sentence:after {
+  content: '”';
+  padding: 0 0 0 0.3rem;
 }
