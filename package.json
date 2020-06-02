@@ -46,6 +46,7 @@
     ]
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hogan.js": "^3.0.2"
   }
 }
