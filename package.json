@@ -46,6 +46,7 @@
     ]
   },
   "dependencies": {
+    "82-commandments": "toomuchdesign/82-commandments#v1.0.0",
     "express": "^4.17.1",
     "hogan.js": "^3.0.2"
   }

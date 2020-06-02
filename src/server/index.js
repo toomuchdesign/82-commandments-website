@@ -1,15 +1,17 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const { getCommandment } = require('./getCommandment');
 const { renderPage } = require('./renderPage');
 
 app.get('/', async (req, res) => {
-  const page = await renderPage('suca');
+  const commandment = getCommandment();
+  const page = await renderPage(commandment);
   res.send(page);
 });
 
 // API
-app.use('/api*', (req, res) => res.send('Api response'));
+app.use('/api/get-commandment', (req, res) => res.send(getCommandment()));
 
 // Serve client
 app.use(express.static('src/client/public'));
