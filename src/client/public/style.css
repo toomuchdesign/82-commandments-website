@@ -2,7 +2,6 @@ body {
   font-family: 'Tenali Ramakrishna', sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 2rem;
   text-align: center;
 }
 
@@ -21,14 +20,27 @@ body {
 }
 
 .Sentence {
+  display: inline-block;
+  font-size: 2rem;
 }
 
-.Sentence:before {
+.Sentence-body {
+  display: block;
+  line-height: 1;
+}
+
+.Sentence-body:before {
   content: '“';
   padding: 0 0.3rem 0 0;
 }
 
-.Sentence:after {
+.Sentence-body:after {
   content: '”';
   padding: 0 0 0 0.3rem;
+}
+
+.Sentence-number {
+  font-size: 1rem;
+  display: block;
+  float: right;
 }
