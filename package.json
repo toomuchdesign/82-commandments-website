@@ -12,8 +12,8 @@
     "version": "git add package.json",
     "postversion": "git push && git push --tags",
     "prepublish": "npm t",
-    "serve": "node src/server/start",
-    "start": "nodemon src/server/start",
+    "start": "node src/server/start",
+    "dev": "nodemon src/server/start",
     "format": "prettier --write \"**/*.{js,json,md}\""
   },
   "keywords": [],
