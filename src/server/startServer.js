@@ -5,9 +5,9 @@ const { getCommandment } = require('./getCommandment');
 const { renderPage } = require('./renderPage');
 
 function startServer() {
-  app.get('/', async (req, res) => {
+  app.get('/', (req, res) => {
     const commandment = getCommandment();
-    const page = await renderPage(commandment);
+    const page = renderPage(commandment);
     res.send(page);
   });
 
