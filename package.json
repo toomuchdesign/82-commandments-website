@@ -7,13 +7,13 @@
     "!__tests__"
   ],
   "scripts": {
-    "test": "echo \"No test specified\"",
+    "test": "ava",
     "preversion": "npm run prepublish",
     "version": "git add package.json",
     "postversion": "git push && git push --tags",
     "prepublish": "npm t",
-    "serve": "node src/server",
-    "start": "nodemon src/server",
+    "serve": "node src/server/start",
+    "start": "nodemon src/server/start",
     "format": "prettier --write \"**/*.{js,json,md}\""
   },
   "keywords": [],
@@ -24,6 +24,8 @@
   "author": "Andrea Carraro <me@andreacarraro.it>",
   "license": "ISC",
   "devDependencies": {
+    "ava": "^3.8.2",
+    "got": "^11.2.0",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
     "nodemon": "^2.0.4",

@@ -9,7 +9,7 @@ async function renderPage(body = '') {
     path.join(__dirname, '../client/public/index.html.mustache'),
     'utf8'
   );
-  
+
   return hogan.compile(template).render({ body });
 }
 
