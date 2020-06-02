@@ -1,0 +1,45 @@
+{
+  "name": "82-commandments-website",
+  "version": "0.0.0",
+  "description": "",
+  "files": [
+    "src",
+    "!__tests__"
+  ],
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "preversion": "npm run prepublish",
+    "version": "git add package.json",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm t",
+    "format": "prettier --write \"**/*.{js,json,md}\""
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toomuchdesign/82-commandments-website.git"
+  },
+  "author": "Andrea Carraro <me@andreacarraro.it>",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^4.0.0",
+    "lint-staged": "^10.0.0",
+    "prettier": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,json}": [
+      "prettier --write",
+      "npm t -- .",
+      "git add"
+    ],
+    "**/*.{md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
