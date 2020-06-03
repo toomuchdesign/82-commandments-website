@@ -7,6 +7,7 @@
     "!__tests__"
   ],
   "scripts": {
+    "build": "netlify-lambda build src/functions build/functions",
     "test": "ava",
     "preversion": "npm run prepublish",
     "version": "git add package.json",
@@ -47,6 +48,7 @@
     ]
   },
   "dependencies": {
-    "82-commandments": "toomuchdesign/82-commandments#v1.0.0"
+    "82-commandments": "toomuchdesign/82-commandments#v1.0.0",
+    "netlify-lambda": "^1.6.3"
   }
 }
