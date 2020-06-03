@@ -1,14 +1,13 @@
 const test = require('ava');
 const got = require('got');
 const commandments = require('82-commandments');
-const { startServer, defaultPort } = require('./server/startServer');
 
-test.before((t) => {
-  startServer();
-});
+// test.before((t) => {
+//   startServer();
+// });
 
 test('render HTML page containing one sentence', async (t) => {
-  const response = await got(`http://localhost:${defaultPort}`, {
+  const response = await got(`http://localhost:8888`, {
     https: {
       rejectUnauthorized: false,
     },

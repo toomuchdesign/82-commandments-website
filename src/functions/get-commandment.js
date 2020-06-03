@@ -2,7 +2,7 @@ const commandments = require('82-commandments');
 
 function getCommandment() {
   // @TODO Improve sentence picker
-  // Pick one sentce per day
+  // Pick one sentence per day
   const number = Math.round(Date.now() / 1000 / 86400) % 82;
   return {
     sentence: commandments[number],
@@ -10,4 +10,10 @@ function getCommandment() {
   };
 }
 
-module.exports.getCommandment = getCommandment;
+exports.getCommandment = getCommandment;
+exports.handler = (event, context, callback) => {
+  callback(null, {
+    statusCode: 200,
+    body: getCommandment(),
+  });
+};

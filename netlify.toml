@@ -1,0 +1,13 @@
+[build]
+  publish = "src/static"
+  functions = "src/functions"
+
+[[redirects]]
+  from = "src/static/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/render-page"
+  status = 200

@@ -12,8 +12,7 @@
     "version": "git add package.json",
     "postversion": "git push && git push --tags",
     "prepublish": "npm t",
-    "start": "node src/server/start",
-    "dev": "nodemon src/server/start",
+    "start": "netlify dev",
     "format": "prettier --write \"**/*.{js,json,md}\""
   },
   "keywords": [],
@@ -48,8 +47,6 @@
     ]
   },
   "dependencies": {
-    "82-commandments": "toomuchdesign/82-commandments#v1.0.0",
-    "express": "^4.17.1",
-    "hogan.js": "^3.0.2"
+    "82-commandments": "toomuchdesign/82-commandments#v1.0.0"
   }
 }
