@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "netlify-lambda build src/functions build/functions",
-    "test": "ava",
+    "xtest": "ava",
     "preversion": "npm run prepublish",
     "version": "git add package.json",
     "postversion": "git push && git push --tags",
